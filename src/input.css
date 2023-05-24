@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.faq-content{
+    height: 0;
+    display: none;
+}
+.faq-content.show{
+    height: auto;
+    display: block;
+}
+.faq-icon{
+    transition: all 200ms ease-in;
+}
+.faq-icon.showRotate{
+    rotate: 45deg;
+    opacity: 1;
+}
+
+@layer components{
+    .bgYellow{
+        background-color: #FFBB00;
+    }
+    .textYellow{
+        color: #FFBB00;
+    }
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    .nav-link{
+        @apply text-xl font-semibold border-[3px] border-transparent hover:bg-white px-4 py-3 hover:border-black rounded-xl transition-all;
+    }
+    .btn{
+        @apply bg-white px-4 py-3 border-[3px] border-black rounded-xl text-xl font-bold;
+    }
+    .btn:hover{
+        transform: translateY(-4px);
+        transition: transform 300ms ease;
+    }
+    .btn-container{
+        @apply rounded-xl;
+
+        background-color: black;
+    }
+    .business-logo{
+        @apply object-contain w-48 opacity-50 hover:opacity-100;
+    }
+    .hero-section{
+        position: relative;
+    }
+    .hero-section::after{
+        content: '';
+        width: 100%;
+        height: 360px;
+        background: url('/dist/images/heroWaves2.svg') no-repeat;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .second-section::after{
+        content: '';
+        width: 100%;
+        height: 360px;
+        background: url('/dist/images/secondWaves.svg') no-repeat;
+        position: absolute;
+        /* z-index: -1; */
+    }
+    .thirty::after{
+        content: '';
+        width: 100%;
+        height: 360px;
+        background: url('/dist/images/thirty.svg') no-repeat;
+        position: absolute;
+        /* z-index: -1; */
+    }
+    .faq-section::after{
+        content: '';
+        width: 100%;
+        height: 360px;
+        background: url('/dist/images/faqSection.svg') no-repeat;
+        position: absolute;
+    }
+}
+
