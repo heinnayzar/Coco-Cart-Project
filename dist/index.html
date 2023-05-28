@@ -21,14 +21,33 @@
             alt="Image"
           />
         </div>
-        <ul class="flex flex-row justify-center items-center gap-6">
-          <li class="nav-link"><a href="#">Home</a></li>
-          <li class="nav-link"><a href="#">Resourses</a></li>
-          <li class="nav-link bg-yellow-500"><a href="#">We are hiring!</a></li>
-          <div class="btn-container">
-            <button class="btn">LOG IN</button>
+        <!-- HamBurgar Menu -->
+        <button class="btn md:hidden burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+  
+          <!-- HamBurgar Dropdown Menu -->
+        <div>
+          <div class="dropdown top-20 left-0 z-10 w-full bg-white hidden absolute top">
+            <ul>
+              <li class="nav-link"><a href="#">Home</a></li>
+              <li class="nav-link"><a href="#">Resourses</a></li>
+              <li class="nav-link"><a href="#">We are hiring!</a></li>
+            </ul>
           </div>
-        </ul>
+        </div>
+
+        <!-- No dropdown -->
+        <div class="hidden md:flex">
+          <ul class="flex flex-row justify-center items-center gap-6">
+            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="#">Resourses</a></li>
+            <li class="nav-link bg-yellow-500"><a href="#">We are hiring!</a></li>
+          </ul>
+        </div>
+        <div class="btn-container">
+          <button class="btn">LOG IN</button>
+        </div>
       </div>
     </nav>
     <!-- hero Section -->
@@ -43,7 +62,7 @@
             <h3 class="font-thin text-4xl mt-8">No code. No app required.</h3>
             <div class="flex justify-start items-center mt-8">
               <div class="btn-container">
-                <button class="btn px-8 py-4">START MY WEBSITE — IT'S FREE</button>
+                <button class="btn px-8 py-4">START MY WEBSITE &midast; IT'S FREE</button>
               </div>
             </div>
             <div class="`flex mt-8 text-white text-2xl font-light">
@@ -71,9 +90,11 @@
     <section class="second-section">
       <section class="mt-48 text-center pt-20 pb-8">
       <div class="container mx-auto w-2/3">
-        <h1 class="font-bold text-7xl">
-          Cococart is made for local businesses.
-        </h1>
+        <div>
+          <h1 class="font-bold text-2xl md:text-7xl">
+            Cococart is made for local businesses.
+          </h1>
+        </div>
         <p class="text-xl mt-10 font-thin">
           We're on a mission to transform independent businesses to accept
           online orders. Cococart empowers small businesses to manage their own
@@ -324,7 +345,7 @@
                 <h1 class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center">⚡️</h1>
               </div>
               <h4 class="text-xl font-bold mt-12">Step1</h4>
-              <p class="text-xl font-thin mt-4">Choose a unique link for your shop name.cococart.co</p>
+              <p class="text-xl font-thin mt-4">Choose a unique link for your shop <code>name.cococart.co</code></p>
             </article>
 
             <article class="w-1/4 mt-12"> 
@@ -375,60 +396,64 @@
     </section>
 
     <!-- Last Section -->
-    <section class="bgYellow pt-64 pb-12">
-      <div class="container mx-auto flex justify-between w-2/3 gap-4">
-        <div class="w-2/5">
-          <div class="w-5/6">
-            <img src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/636e86be61df2980279b8538_COCOCART_WORDMARK_BLACKANDWHITE.png" alt="Image">
+    <footer class="bgYellow pt-64 pb-12 footer-section">
+      <div class="flex gap-12 mx-auto max-w-3xl">
+      <!-- left -->
+        <div class="w-1/3">
+          <div class="">
+            <div class="w-64">
+              <img src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/636e86be61df2980279b8538_COCOCART_WORDMARK_BLACKANDWHITE.png" alt="Image">
+            </div>
+            <p class="text-xl mt-8">Simple, beautiful shops for pretty much anything.</p>
+            <select class="text-lg font-semibold mt-8 bg-transparent" name="" id="">
+              <option value="">English</option>
+              <option value="">Espanol</option>
+            </select>
           </div>
-          <p class="text-2xl mt-12">Simple, beautiful shops for pretty much anything.</p>
-          <button class="mt-10 font-semibold text-lg">English</button>
         </div>
-
-        <div class="w-1/6"> 
-          <div class="flex flex-col justify-between items-start gap-6">
+        <!-- Right -->
+        <div class="grid grid-cols-4 flex-grow">
+          <div class="space-y-4">
             <p class="font-bold">Product</p>
-
-            <a href="#">Home</a>
-            <a href="#">Pricing</a>
-            <a href="#">Content</a>
-            <a href="#">Deals</a>
+            <ul class="space-y-4"> 
+              <li>Home</li>
+              <li>Pricing</li>
+              <li>Contact</li>
+              <li>Deals</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="w-1/6">          
-          <div class="flex flex-col justify-between items-start gap-6">
-            <p class="font-bold">Resources</p>
-
-            <a href="#">Blog</a>
-            <a href="#">Instagram</a>
-            <a href="#">Facebool</a>
-            <a href="#">Help Center</a>
+          <div class="space-y-4">
+            <p class="font-bold">Resourses</p>
+            <ul class="space-y-4"> 
+              <li>Blog</li>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>Help Center</li>
+            </ul>
           </div>
-        </div>
 
-        <div class="w-1/6">          
-          <div class="flex flex-col justify-between items-start gap-6">
+          <div class="space-y-4">
             <p class="font-bold">Company</p>
+            <ul class="space-y-4"> 
+              <li>We're are hiring</li>
+              <li>Terms</li>
+              <li>Privacy</li>
+            </ul>
+          </div>
 
-            <a href="#">We're are hiring</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
+          <div class="space-y-4">
+            <p class="font-bold">Sell Anything</p>
+            <ul class="space-y-4"> 
+              <li>Crafts</li>
+              <li>Merchandise</li>
+              <li>Food and Drink</li>
+            </ul>
           </div>
         </div>
-
-        <div class="w-1/6">          
-          <div class="flex flex-col justify-between items-start gap-6">
-            <p class="font-bold">Sell anything</p>
-            
-            <a href="#">Crafts</a>
-            <a href="#">Merchandise</a>
-            <a href="#">Food and Drink</a>
-          </div>
-        </div>
-
       </div>
-    </section>
+      
+    </footer>
 
     <script src="app.js"></script>
   </body>

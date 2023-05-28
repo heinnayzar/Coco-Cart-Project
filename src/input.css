@@ -80,7 +80,7 @@
         content: '';
         width: 100%;
         height: 360px;
-        background: url('/dist/images/faqSection.svg') no-repeat;
+        background: url('/dist/images/faqWaves.svg') no-repeat;
         position: absolute;
     }
 }
