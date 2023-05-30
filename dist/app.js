@@ -5,15 +5,17 @@ const faqIcon = document.querySelector('.faq-icon')
 
 const burger = document.querySelector('.burger')
 const dropdownMenu = document.querySelector('.dropdown')
-const nav =document.querySelector('nav')
+const nav = document.querySelector('nav')
 
 burger.addEventListener('click', () => {
-    if (dropdownMenu.classList.contains('hidden')){
-        dropdownMenu.classList.remove('hidden')
+    if (dropdownMenu.classList.contains('h-0')){
+        dropdownMenu.classList.remove('h-0')
+        dropdownMenu.style.height = '248px'
         nav.style.backgroundColor = 'white'
     } else {
-        dropdownMenu.classList.add('hidden')
-        nav.style.backgroundColor = '#FFBB00'
+        dropdownMenu.classList.add('h-0')
+        dropdownMenu.style.height = '0px'
+        nav.style.backgroundColor = '#FFBB00' 
     }
 })
 

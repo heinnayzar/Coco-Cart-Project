@@ -5,372 +5,549 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coco Cart</title>
+
     <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body class="text-gray-900">
     <!-- Navigation Baar -->
-    <nav class="bgYellow">
+    <nav class="bgYellow hamTran">
       <div
         class="container mx-auto flex flex-row justify-between items-center p-4"
       >
-        <div class="w-1/6">
+        <div class="w-2/3 md:w-1/6">
           <img
             src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/637a3904e86a45e79e450a65_COCOCART_WORDMARK_BLACKANDWHITE.svg"
             alt="Image"
           />
         </div>
-        <!-- HamBurgar Menu -->
-        <button class="btn md:hidden burger">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-  
-          <!-- HamBurgar Dropdown Menu -->
+
+        <!-- HamBurgar Dropdown Menu -->
         <div>
-          <div class="dropdown top-20 left-0 z-10 w-full bg-white hidden absolute top">
-            <ul>
+          <div
+            class="dropdown top-20 left-0 z-10 w-full bg-white h-0 overflow-hidden absolute top hamTran"
+          >
+            <ul class="space-y-4 py-4">
               <li class="nav-link"><a href="#">Home</a></li>
               <li class="nav-link"><a href="#">Resourses</a></li>
               <li class="nav-link"><a href="#">We are hiring!</a></li>
+              <li class="nav-link"><a href="#">Log in to dashbord</a></li>
             </ul>
           </div>
         </div>
+
+        <!-- HamBurgar Menu -->
+        <button class="btnSecondary md:hidden burger">
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
         <!-- No dropdown -->
         <div class="hidden md:flex">
           <ul class="flex flex-row justify-center items-center gap-6">
             <li class="nav-link"><a href="#">Home</a></li>
             <li class="nav-link"><a href="#">Resourses</a></li>
-            <li class="nav-link bg-yellow-500"><a href="#">We are hiring!</a></li>
+            <li class="nav-link bg-yellow-500">
+              <a href="#">We are hiring!</a>
+            </li>
           </ul>
         </div>
-        <div class="btn-container">
+        <div class="hidden md:flex btn-container">
           <button class="btn">LOG IN</button>
         </div>
       </div>
     </nav>
     <!-- hero Section -->
     <section class="hero-section bgYellow">
-      <section class="">
+      <div class="container mx-auto flex px-4">
         <!-- Left -->
-        <div class="container mx-auto flex">
-          <div class="w-2/3 py-16">
-            <h1 class="font-bold text-7xl">
-              Create a simple beautiful store in minutes.
-            </h1>
-            <h3 class="font-thin text-4xl mt-8">No code. No app required.</h3>
-            <div class="flex justify-start items-center mt-8">
-              <div class="btn-container">
-                <button class="btn px-8 py-4">START MY WEBSITE &midast; IT'S FREE</button>
-              </div>
+        <div
+          class="text-center lg:text-left lg:w-2/3 py-4 md:py-16"
+          data-aos="fade-right" data-aos-duration="1500"
+        >
+          <h1 class="font-bold text-4xl md:text-7xl">
+            Create a simple beautiful store in minutes.
+          </h1>
+          <h3 class="text-lg md:text-4xl mt-2 md:mt-8">
+            No code. No app required.
+          </h3>
+          <div
+            class="flex justify-center items-center lg:flex lg:justify-start lg:items-center mt-4 md:mt-8" 
+          >
+            <div class="btn-container">
+              <button class="btn md:px-8 md:py-4">
+                START MY WEBSITE &mdash; IT'S FREE
+              </button>
             </div>
-            <div class="`flex mt-8 text-white text-2xl font-light">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="mt-2 text-lg">Loved by 30,000+ businesses</p>
           </div>
-          <!-- Right -->
-          <div class="w-1/3">
-            <img
-              src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60fc05b036a77a95a30ed20b_hero-video.gif"
-              alt="Image"
-            />
+          <div class="`flex mt-2 md:mt-8 text-white text-2xl font-light">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
+          <p class="mt-2">Loved by 30,000+ businesses</p>
         </div>
-      </section>
+        <!-- Right -->
+        <div class="lg:w-1/3 hidden lg:block" data-aos="zoom-in" data-aos-duration="1500">
+          <img
+            src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60fc05b036a77a95a30ed20b_hero-video.gif"
+            alt="Image"
+          />
+        </div>
+      </div>
     </section>
 
     <!-- Second Section -->
 
     <section class="second-section">
-      <section class="mt-48 text-center pt-20 pb-8">
-      <div class="container mx-auto w-2/3">
-        <div>
-          <h1 class="font-bold text-2xl md:text-7xl">
+      <section class="mt-14 md:mt-48 text-center pt-20 pb-8 px-4">
+        <div class="container mx-auto md:w-2/3" data-aos="fade-up" data-aos-duration="1500">
+          <h1 class="font-bold text-4xl md:text-7xl">
             Cococart is made for local businesses.
           </h1>
-        </div>
-        <p class="text-xl mt-10 font-thin">
-          We're on a mission to transform independent businesses to accept
-          online orders. Cococart empowers small businesses to manage their own
-          sales without apps or marketplaces that charge unsustainable fees and
-          commissions.
-        </p>
-        <div class="flex justify-center items-center mt-12">
-          <div class="btn-container">
-            <button class="btn px-8">See example</button>
+          <p class="text-base md:text-xl mt-4 md:mt-10">
+            We're on a mission to transform independent businesses to accept
+            online orders. Cococart empowers small businesses to manage their
+            own sales without apps or marketplaces that charge unsustainable
+            fees and commissions.
+          </p>
+          <div class="flex justify-center items-center mt-4 md:mt-12" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="btn-container">
+              <button class="btn px-8">See example</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="grid max-w-4xl grid-cols-4 gap-16 mx-auto mt-10 items-center justify-center">
-        <a href="https://www.instagram.com/motherdoughbakery/"
-          ><img class="business-logo" src="images/8.png" alt="Image"
-        /></a>
-        <a href="https://www.instagram.com/thebakedarea/"
-          ><img class="business-logo" src="images/1.png" alt="Image"
-        /></a>
-        <a href="https://www.instagram.com/mochata_/"
-          ><img class="business-logo" src="images/5.png" alt="Image"
-        /></a>
-        <a href="https://www.instagram.com/theobroma.bakelab/"
-          ><img class="business-logo" src="images/3.png" alt="Image"
-        /></a>
-        <a href="https://www.instagram.com/indocinfood/"
-          ><img class="business-logo" src="images/4.png" alt="Image"
-        /></a>
-        <a href="https://www.instagram.com/vavlbeautesingapore/"
-          ><img class="business-logo" src="images/2.png" alt="Image"
-        /></a>
-        <a href="https://www.instagram.com/thor.storage/"
-          ><img class="business-logo" src="images/6.png" alt="Image"
-        /></a>
-        <a href="https://www.ycombinator.com/"
-          ><img class="business-logo" src="images/7.png" alt="Image"
-        /></a>
-      </div>
+        <div
+          class="grid max-w-4xl grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-12 mx-auto mt-8 md:mt-10 items-center justify-center px-4"
+          data-aos="fade-up" data-aos-duration="1500"
+        >
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/motherdoughbakery/"
+            ><img class="business-logo" src="images/8.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/thebakedarea/"
+            ><img class="business-logo" src="images/1.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/mochata_/"
+            ><img class="business-logo" src="images/5.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/theobroma.bakelab/"
+            ><img class="business-logo" src="images/3.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/indocinfood/"
+            ><img class="business-logo" src="images/4.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/vavlbeautesingapore/"
+            ><img class="business-logo" src="images/2.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.instagram.com/thor.storage/"
+            ><img class="business-logo" src="images/6.png" alt="Image"
+          /></a>
+          <a
+            class="flex justify-center items-center"
+            href="https://www.ycombinator.com/"
+            ><img class="business-logo" src="images/7.png" alt="Image"
+          /></a>
+        </div>
 
-      <article
-        class="flex flex-row container mx-auto justify-center items-center w-2/3 mt-24"
-      >
-        <div class="w-1/2 text-center px-6">
-          <h1 class="text-5xl font-bold">Automate orders from social media.</h1>
-          <p class="mt-8 text-2xl">
-            Managing orders is now easier than ever. No more replying to DMs.
-            Don't miss out on orders from customers.
-          </p>
-        </div>
-        <div class="w-1/2">
-          <img
-            src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60fc86e841780d0802727e90_2-2.png"
-            alt="Image"
-          />
-        </div>
-      </article>
+        <article
+          class="flex flex-col md:flex md:flex-row justify-center items-center container mx-auto md:w-2/3 mt-12 md:mt-24"
+        >
+          <div class="w-full lg:w-1/2 text-center p-4" data-aos="fade-right" data-aos-duration="1500">
+            <h1 class="text-3xl lg:text-5xl font-bold">
+              Automate orders from social media.
+            </h1>
+            <p class="mt-4 md:mt-8 lg:text-2xl">
+              Managing orders is now easier than ever. No more replying to DMs.
+              Don't miss out on orders from customers.
+            </p>
+          </div>
+          <div class="w-full lg:w-1/2 p-4" data-aos="fade-left" data-aos-duration="1500">
+            <img
+              class=""
+              src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60fc86e841780d0802727e90_2-2.png"
+              alt="Image"
+            />
+          </div>
+        </article>
 
-      <article
-        class="flex flex-row container mx-auto justify-center items-center w-2/3 mt-14"
-      >
-        <div class="w-1/2">
-          <img
-            src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60fc810de761ae96f71838db_1-2-p-1080.png"
-            alt="Image"
-          />
-        </div>
-        <div class="w-1/2 text-center px-8">
-          <h1 class="text-5xl font-bold">
-            Simple to set up. Impossible to mess up.
-          </h1>
-          <p class="mt-8 text-2xl">
-            No learning curve. Gorgeous. Blazingly fast. And comes with all the
-            features you need.
-          </p>
-        </div>
-      </article>
+        <article
+          class="flex flex-col-reverse md:flex md:flex-row justify-center items-center container mx-auto md:w-2/3 mt-12 md:mt-24"
+        >
+          <div class="w-full lg:w-1/2 p-4" data-aos="fade-right" data-aos-duration="1500">
+            <img
+              src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60fc810de761ae96f71838db_1-2-p-1080.png"
+              alt="Image"
+            />
+          </div>
+          <div class="w-full lg:w-1/2 text-center p-4" data-aos="fade-left" data-aos-duration="1500">
+            <h1 class="text-2xl lg:text-5xl font-bold">
+              Simple to set up. Impossible to mess up.
+            </h1>
+            <p class="mt-8 text-base lg:text-2xl">
+              No learning curve. Gorgeous. Blazingly fast. And comes with all
+              the features you need.
+            </p>
+          </div>
+        </article>
 
-      <article
-        class="flex flex-row container mx-auto justify-center items-center w-2/3 mt-14"
-      >
-        <div class="w-1/2 text-center px-8">
-          <h1 class="text-5xl font-bold">Accept all kinds of payments.</h1>
-          <p class="mt-8 text-2xl">
-            Automatically collect payments by credit and debit card, bank
-            transfer, Venmo, PayNow, GCash, and more.
-          </p>
-        </div>
-        <div class="w-1/2">
-          <img
-            src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60f8a6a86a773f747595dccd_payments-p-1080.png"
-            alt="Image"
-          />
-        </div>
-      </article>
+        <article
+          class="flex flex-col md:flex md:flex-row justify-normal items-center container mx-auto md:w-2/3 mt-12 md:mt-24"
+        >
+          <div class="w-full lg:w-1/2 text-center p-4" data-aos="fade-right" data-aos-duration="1500">
+            <h1 class="text-2xl lg:text-5xl font-bold">
+              Accept all kinds of payments.
+            </h1>
+            <p class="mt-8 text-base lg:text-2xl">
+              Automatically collect payments by credit and debit card, bank
+              transfer, Venmo, PayNow, GCash, and more.
+            </p>
+          </div>
+          <div class="w-full lg:w-1/2 p-4" data-aos="fade-left" data-aos-duration="1500">
+            <img
+              src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/60f8a6a86a773f747595dccd_payments-p-1080.png"
+              alt="Image"
+            />
+          </div>
+        </article>
 
-      <div class="flex justify-center items-center mt-8">
-        <div class="btn-container">
-          <button class="btn px-8">Sign Up For Free</button>
+        <div class="flex justify-center items-center mt-4 md:mt-12" data-aos="zoom-in" data-aos-duration="1500">
+          <div class="btn-container">
+            <button class="btn md:px-8">Sign Up For Free</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </section>
 
     <!-- 30,000+ section -->
-    <section class="bg-rose-50 thirty pt-64">
-      <section class="container mx-auto w-2/3">
-        <div class="text-center">
-          <h1 class="text-6xl font-bold">30,000+ businesses have earned over $50 million</h1>
-          <p class="text-xl mt-8">Local businesses, entrepreneurs, restaurants, creators, artisans, and makers around the world have switched to Cococart to <strong> grow</strong> their sales</p>
-        </div>
-  
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"Such an incredible and easy website for a home business like us. It definitely helps us in getting more sales and make our life 10x easier!"</h2>
-          <p class="text-xl mt-8">— @m.amaspice</p>
+    <section class="bg-rose-50 thirty pt-28 md:pt-64">
+      <section class="container mx-auto md:w-2/3 px-4">
+        <div class="text-center" data-aos="fade-up" data-aos-duration="1500">
+          <h1 class="text-4xl md:text-6xl font-bold">
+            30,000+ businesses have earned over $50 million
+          </h1>
+          <p class="text-lg md:text-xl mt-4 md:mt-8">
+            Local businesses, entrepreneurs, restaurants, creators, artisans,
+            and makers around the world have switched to Cococart to
+            <strong> grow</strong> their sales
+          </p>
         </div>
 
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"The best online platform for small businesses!"
+        <div class="text-center mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "Such an incredible and easy website for a home business like us. It
+            definitely helps us in getting more sales and make our life 10x
+            easier!"
           </h2>
-          <p class="text-xl mt-8">— @thepenthousekitchenandbakery</p>
+          <p class="md:text-xl md:mt-8">— @m.amaspice</p>
         </div>
 
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"YES! Instantly fell in love with Cococart! It was so easy to use. I also love how attractive it looks."</h2>
-          <p class="text-xl mt-8">— @puffnbatter</p>
-        </div>
-
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"So fast to edit and so smooth to use. I must say, this is way way better than the other platforms."</h2>
-          <p class="text-xl mt-8">— @merienda.manila</p>
-        </div>
-
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"I love it! I should've done this sooner."</h2>
-          <p class="text-xl mt-8">— @paperburnph</p>
-        </div>
-
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"Cococart is EXACTLY what I need for my business. I've been working on my site for 2 years and it's still not published. So thank you for taking this off me."</h2>
-          <p class="text-xl mt-8">— @jacobymay_photography</p>
-        </div>
-
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"We've switched our ordering platform to Cococart. We're surprised how simple it is to set up, how clean and straightforward the website looks."</h2>
-          <p class="text-xl mt-8">— @kraftkind</p>
-        </div>
-
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"I migrated from Shopify. I've been using Cococart for close to a year and it only gets better! My Dad manages his own store on Cococart too!"</h2>
-          <p class="text-xl mt-8">— @filled.n.frosted</p>
-        </div>
-
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"Amazing! You make our lives 10000x easier."
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "The best online platform for small businesses!"
           </h2>
-          <p class="text-xl mt-8">— @culturd.mnl</p>
+          <p class="md:text-xl md:mt-8">— @thepenthousekitchenandbakery</p>
         </div>
 
-        <div class="text-center mt-16">
-          <h2 class="text-4xl font-bold">"Wow! Is it really all this easy? A little too good to be true!"</h2>
-          <p class="text-xl mt-8">— @valerieskitchenph</p>
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "YES! Instantly fell in love with Cococart! It was so easy to use. I
+            also love how attractive it looks."
+          </h2>
+          <p class="md:text-xl md:mt-8">— @puffnbatter</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "So fast to edit and so smooth to use. I must say, this is way way
+            better than the other platforms."
+          </h2>
+          <p class="md:text-xl md:mt-8">— @merienda.manila</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "I love it! I should've done this sooner."
+          </h2>
+          <p class="md:text-xl md:mt-8">— @paperburnph</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "Cococart is EXACTLY what I need for my business. I've been working
+            on my site for 2 years and it's still not published. So thank you
+            for taking this off me."
+          </h2>
+          <p class="md:text-xl md:mt-8">— @jacobymay_photography</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "We've switched our ordering platform to Cococart. We're surprised
+            how simple it is to set up, how clean and straightforward the
+            website looks."
+          </h2>
+          <p class="md:text-xl md:mt-8">— @kraftkind</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "I migrated from Shopify. I've been using Cococart for close to a
+            year and it only gets better! My Dad manages his own store on
+            Cococart too!"
+          </h2>
+          <p class="md:text-xl md:mt-8">— @filled.n.frosted</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "Amazing! You make our lives 10000x easier."
+          </h2>
+          <p class="md:text-xl md:mt-8">— @culturd.mnl</p>
+        </div>
+
+        <div class="text-center mt-8 md:mt-16" data-aos="fade-up" data-aos-duration="1500">
+          <h2 class="text-2xl md:text-4xl font-bold">
+            "Wow! Is it really all this easy? A little too good to be true!"
+          </h2>
+          <p class="md:text-xl md:mt-8">— @valerieskitchenph</p>
         </div>
       </section>
     </section>
     <!-- FAQ section -->
-    <section class="bg-white mt-56 mb-4 faq-section">
+    <section class="bg-white mt-24 md:mt-56 mb-4 faq-section">
       <div class="max-w-3xl mx-auto">
-        <h1 class="text-6xl font-bold text-center">FAQs</h1>
-         
-        <div class="faq-container mt-8">
-          <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title">
-              <p class="font-bold text-2xl">How much does it cost?</p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
-            </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">Cococart is free for small businesses! You can buy optional upgrades if you want to support us.
-            The free version of Cococart already gives you more than any other ecommerce platform, but we help you take online business even further with our paid plans.
-            </div>
-          </article>
-  
-          <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0">
-              <p class="font-bold text-2xl">Where do my orders go?</p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
-            </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">We've built an order management system for you. Simply log in to your admin dashboard and you'll be able to manage your orders, see your earnings, add products, and more!
-            </div>
-          </article>
-  
-          <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0">
-              <p class="font-bold text-2xl">How do I receive payments?</p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
-            </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">Cococart is free for small businesses! You can buy optional upgrades if you want to support us.
-            The free version of Cococart already gives you more than any other ecommerce platform, but we help you take online business even further with our paid plans.
-            </div>
-          </article>
+        <h1 class="text-4xl md:text-6xl font-bold text-center" data-aos="fade" data-aos-duration="1500">FAQs</h1>
 
-          <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0">
-              <p class="font-bold text-2xl">What fees are there?</p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
-            </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">For payments direct to your account, there are no fees. For credit/debit card payments, we use Stripe.com which charges a standard 1 - 4% depending on country.
-            </div>
-          </article>
-
-          <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0">
-              <p class="font-bold text-2xl">How long does it take to get set up?</p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
-            </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">Literally less than 5 minutes! You can get started right away.
-            </div>
-          </article>
-
-          <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0">
-              <p class="font-bold text-2xl">What countries do you support?
-
+        <div class="faq-container mt-8 px-4" data-aos="fade-up" data-aos-duration="1500">
+          <article class=" ">
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title"
+            >
+              <p class="font-bold text-lg md:text-2xl">
+                How much does it cost?
               </p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
             </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">Anyone can use Cococart from anywhere in the world!
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              Cococart is free for small businesses! You can buy optional
+              upgrades if you want to support us.
+              <br />
+              <br />
+              The free version of Cococart already gives you more than any other
+              ecommerce platform, but we help you take online business even
+              further with our paid plans.
             </div>
           </article>
 
           <article class="">
-            <div class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0">
-              <p class="font-bold text-2xl">Where can I get in touch for corporate or custom solutions?</p>
-              <i class="fa-solid fa-circle-plus text-xl opacity-50 faq-icon"></i>
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0"
+            >
+              <p class="font-bold text-lg md:text-2xl">
+                Where do my orders go?
+              </p>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
             </div>
-            <div class="text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content">If you have special requirements or want custom solutions with our platform, get in touch with us here.
-
-              For general inquiries about our product, send us an email here.
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              We've built an order management system for you. Simply log in to
+              your admin dashboard and you'll be able to manage your orders, see
+              your earnings, add products, and more!
             </div>
           </article>
-          
+
+          <article class="">
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0"
+            >
+              <p class="font-bold text-lg md:text-2xl">
+                How do I receive payments?
+              </p>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
+            </div>
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              Cococart is free for small businesses! You can buy optional
+              upgrades if you want to support us. The free version of Cococart
+              already gives you more than any other ecommerce platform, but we
+              help you take online business even further with our paid plans.
+            </div>
+          </article>
+
+          <article class="">
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0"
+            >
+              <p class="font-bold text-lg md:text-2xl">What fees are there?</p>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
+            </div>
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              For payments direct to your account, there are no fees. For
+              credit/debit card payments, we use Stripe.com which charges a
+              standard 1 - 4% depending on country.
+            </div>
+          </article>
+
+          <article class="">
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0"
+            >
+              <p class="font-bold text-lg md:text-2xl">
+                How long does it take to get set up?
+              </p>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
+            </div>
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              Literally less than 5 minutes! You can get started right away.
+            </div>
+          </article>
+
+          <article class="">
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0"
+            >
+              <p class="font-bold text-lg md:text-2xl">
+                What countries do you support?
+              </p>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
+            </div>
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              Anyone can use Cococart from anywhere in the world!
+            </div>
+          </article>
+
+          <article class="">
+            <div
+              class="flex justify-between items-center border-2 border-black py-6 px-4 cursor-pointer faq-title border-t-0"
+            >
+              <p class="font-bold text-lg md:text-2xl">
+                Where can I get in touch for corporate or custom solutions?
+              </p>
+              <i
+                class="fa-solid fa-circle-plus md:text-xl opacity-50 faq-icon"
+              ></i>
+            </div>
+            <div
+              class="md:text-lg font-medium border-2 border-black py-6 px-4 border-t-0 faq-content"
+            >
+              If you have special requirements or want custom solutions with our
+              platform,
+              <a class="text-blue-500" href="#"> get in touch with us here.</a>
+              <br />
+              <br />
+              For general inquiries about our product,
+              <a class="text-blue-500" href="#"> send us an email here.</a>
+            </div>
+          </article>
         </div>
 
-        <div class="continer mx-auto text-center mt-32">
-          <h1 class="text-6xl font-bold ">Start a business in minutes. Not months.</h1>
-          <div class="flex justify-around">
-            <article class="w-1/4 mt-12"> 
+        <div class="continer mx-auto text-center mt-32 px-4">
+          <h1 class="text-4xl md:text-6xl font-bold" data-aos="fade-up" data-aos-duration="1500">
+            Start a business in minutes. Not months.
+          </h1>
+          <div class="flex flex-col items-center md:flex-row md:justify-around">
+            <article class="md:w-1/4 mt-12" data-aos="zoom-in" data-aos-duration="1000">
               <!-- Emoji -->
               <div class="flex items-center justify-center">
-                <h1 class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center">⚡️</h1>
+                <h1
+                  class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center"
+                >
+                  ⚡️
+                </h1>
               </div>
               <h4 class="text-xl font-bold mt-12">Step1</h4>
-              <p class="text-xl font-thin mt-4">Choose a unique link for your shop <code>name.cococart.co</code></p>
+              <p class="text-lg mt-4">
+                Choose a unique link for your shop <code>name.cococart.co</code>
+              </p>
             </article>
 
-            <article class="w-1/4 mt-12"> 
+            <article class="md:w-1/4 mt-12" data-aos="zoom-in" data-aos-duration="1500">
               <!-- Emoji -->
               <div class="flex items-center justify-center">
-                <h1 class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center">🖼</h1>
+                <h1
+                  class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center"
+                >
+                  🖼
+                </h1>
               </div>
               <h4 class="text-xl font-bold mt-12">Step2</h4>
-              <p class="text-xl font-thin mt-4">Add your products, delivery and payment methods.</p>
+              <p class="text-lg mt-4">
+                Add your products, delivery and payment methods.
+              </p>
             </article>
 
-            <article class="w-1/4 mt-12"> 
+            <article class="md:w-1/4 mt-12" data-aos="zoom-in" data-aos-duration="2000">
               <!-- Emoji -->
               <div class="flex items-center justify-center">
-                <h1 class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center">🎉</h1>
+                <h1
+                  class="text-7xl border-[3px] border-black rounded-3xl p-8 w-40 h-40 flex items-center justify-center"
+                >
+                  🎉
+                </h1>
               </div>
               <h4 class="text-xl font-bold mt-12">Step3</h4>
-              <p class="text-xl font-thin mt-4">Share your URL on your social media and earn money!</p>
+              <p class="text-lg mt-4">
+                Share your URL on your social media and earn money!
+              </p>
             </article>
           </div>
         </div>
 
         <!-- Free and Premmium Section -->
-        <div class="flex items-center justify-center gap-8 mt-32">
-          <article class="container text-center p-4 border-4 border-black rounded-3xl bgYellow">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8 mt-32"
+        >
+          <article
+            class="w-80 text-center p-4 border-4 border-black rounded-3xl bgYellow"
+            data-aos="fade-right" data-aos-duration="1500"
+          >
             <h4 class="font-semibold text-xl mt-4">Free Plan</h4>
             <h1 class="text-6xl font-extrabold mt-6">$0/mo</h1>
             <h4 class="font-semibold text-xl mt-4">Zero introductory fees</h4>
@@ -381,7 +558,10 @@
             </div>
           </article>
 
-          <article class="container text-center p-4 border-4 border-black rounded-3xl bg-white">
+          <article
+            class="w-80 text-center p-4 border-4 border-black rounded-3xl bg-white"
+            data-aos="fade-left" data-aos-duration="1500"
+          >
             <h4 class="font-semibold text-xl mt-4">Premium</h4>
             <h1 class="text-6xl font-extrabold mt-6 textYellow">$5/mo</h1>
             <h4 class="font-semibold text-xl mt-4">Starting from</h4>
@@ -396,26 +576,35 @@
     </section>
 
     <!-- Last Section -->
-    <footer class="bgYellow pt-64 pb-12 footer-section">
-      <div class="flex gap-12 mx-auto max-w-3xl">
-      <!-- left -->
-        <div class="w-1/3">
-          <div class="">
-            <div class="w-64">
-              <img src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/636e86be61df2980279b8538_COCOCART_WORDMARK_BLACKANDWHITE.png" alt="Image">
-            </div>
-            <p class="text-xl mt-8">Simple, beautiful shops for pretty much anything.</p>
-            <select class="text-lg font-semibold mt-8 bg-transparent" name="" id="">
-              <option value="">English</option>
-              <option value="">Espanol</option>
-            </select>
+    <footer class="bgYellow pt-28 md:pt-64 pb-12 footer-section">
+      <div
+        class="flex flex-col-reverse md:flex-row gap-10 mx-auto max-w-3xl px-4 md:px-0"
+      >
+        <!-- left -->
+        <div class="md:w-1/2">
+          <div class="w-60 md:w-full">
+            <img
+              src="https://uploads-ssl.webflow.com/60f35132d5febb6f03ec9d7a/636e86be61df2980279b8538_COCOCART_WORDMARK_BLACKANDWHITE.png"
+              alt="Image"
+            />
           </div>
+          <p class="text-xl mt-8">
+            Simple, beautiful shops for pretty much anything.
+          </p>
+          <select
+            class="text-sm md:text-lg font-semibold mt-8 bg-transparent"
+            name=""
+            id=""
+          >
+            <option class="text-xs" value="">English</option>
+            <option class="text-xs" value="">Espanol</option>
+          </select>
         </div>
         <!-- Right -->
-        <div class="grid grid-cols-4 flex-grow">
-          <div class="space-y-4">
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:flex gap-6 md:gap-0 w-full">
+          <div class="space-y-5 md:w-1/4">
             <p class="font-bold">Product</p>
-            <ul class="space-y-4"> 
+            <ul class="space-y-5">
               <li>Home</li>
               <li>Pricing</li>
               <li>Contact</li>
@@ -423,9 +612,9 @@
             </ul>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-5 md:w-1/4">
             <p class="font-bold">Resourses</p>
-            <ul class="space-y-4"> 
+            <ul class="space-y-5">
               <li>Blog</li>
               <li>Instagram</li>
               <li>Facebook</li>
@@ -433,18 +622,18 @@
             </ul>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-5 md:w-1/4">
             <p class="font-bold">Company</p>
-            <ul class="space-y-4"> 
-              <li>We're are hiring</li>
+            <ul class="space-y-5">
+              <li>We're hiring</li>
               <li>Terms</li>
               <li>Privacy</li>
             </ul>
           </div>
 
-          <div class="space-y-4">
+          <div class="space-y-5 md:w-1/4">
             <p class="font-bold">Sell Anything</p>
-            <ul class="space-y-4"> 
+            <ul class="space-y-5">
               <li>Crafts</li>
               <li>Merchandise</li>
               <li>Food and Drink</li>
@@ -452,9 +641,12 @@
           </div>
         </div>
       </div>
-      
     </footer>
 
     <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
